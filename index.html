@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fulcrum | Discord Bot</title>
+    <meta
+      name="description"
+      content="Fulcrum is a powerful anti-nuke Discord moderation bot built to protect servers, lock down threats, and restore control fast."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">&gt;_</div>
+          <span class="brand-name">Fulcrum</span>
+        </div>
+
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="#home">Commands</a>
+          <a href="#status">Status</a>
+          <a href="https://discord.gg/XPb6FnJkXh" target="_blank" rel="noreferrer">Support</a>
+        </nav>
+
+        <a
+          class="invite-btn"
+          href="https://discord.com/oauth2/authorize?client_id=1563467963070152714&permissions=8&integration_type=0&scope=bot"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Invite
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-glow"></div>
+
+          <div class="hero-content">
+            <div class="hero-badge">Fulcrum</div>
+            <h1>
+              Fulcrum is your
+              <span class="accent">server's companion.</span>
+            </h1>
+
+            <div class="stats-row" aria-label="Bot stats">
+              <div class="stat-pill"><span>3</span> servers</div>
+              <div class="stat-pill"><span>12</span> commands</div>
+            </div>
+
+            <div class="cta-row">
+              <a
+                class="primary-btn"
+                href="https://discord.com/oauth2/authorize?client_id=1563467963070152714&permissions=8&integration_type=0&scope=bot"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span class="icon">◌</span>
+                Add to Discord
+              </a>
+
+              <a class="secondary-btn" href="#commands">Commands</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="status-panel" id="status">
+          <div class="status-card">
+            <span class="status-label">Status</span>
+            <strong>Protection online</strong>
+            <p>Core anti-nuke checks, server lockdown controls, and emergency recovery tools are active.</p>
+          </div>
+          <div class="status-card">
+            <span class="status-label">Network</span>
+            <strong>Fast response</strong>
+            <p>Low-latency moderation tools built to respond immediately during suspicious server activity.</p>
+          </div>
+          <div class="status-card">
+            <span class="status-label">Support</span>
+            <strong>Need help?</strong>
+            <p>Join the community server for assistance, updates, and support from the Fulcrum team.</p>
+          </div>
+        </section>
+
+        <section class="support-panel" id="support">
+          <div>
+            <span class="support-kicker">Support</span>
+            <h2>Need help or want to stay updated?</h2>
+          </div>
+          <a
+            class="support-btn"
+            href="https://discord.gg/XPb6FnJkXh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Join Support Server
+          </a>
+        </section>
+
+        <section class="command-panel" id="commands">
+          <div class="panel-header">
+            <div class="chip-group" id="filters" aria-label="Command filters">
+              <button class="chip active" data-filter="all">All</button>
+              <button class="chip" data-filter="anti-nuke">Anti-Nuke</button>
+              <button class="chip" data-filter="server">Server</button>
+              <button class="chip" data-filter="utility">Utility</button>
+            </div>
+
+            <label class="search-wrap" aria-label="Search commands">
+              <span class="search-icon">⌕</span>
+              <input id="commandSearch" type="search" placeholder="Search commands" />
+            </label>
+          </div>
+
+          <div class="command-grid" id="commandGrid" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
